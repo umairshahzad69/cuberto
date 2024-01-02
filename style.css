@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap');
+@font-face {
+    font-family: matter;
+    src: url('./matter-light.ttf') format('truetype'),
+        url('./matter-regular.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: matter;
+}
+.nav{
+    height: 9vh;
+    width: 100vw;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+
+}
+.logo img{
+    height: 100px;
+    overflow: hidden;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    font-size: 1.5vw;
+}
+.hero{
+    padding: 7vw 12vw;
+}
+.hero h1{
+    font-size: 9vw;
+    font-weight: 400;
+    letter-spacing: -.5vw;
+}
+.hero span{
+    font-family: 'Roboto Flex';
+    font-style: italic;
+    font-weight: 300;
+}
+.hero-center{
+    display: flex;
+    align-items: center;
+}
+.video-circle{
+    /* background: #000; */
+    border-radius: 45%;
+    overflow: hidden;
+    width: 13vw;
+    height: 18vh;
+}
+.video-circle video{
+    height: 30vh;
+    object-fit: cover;
+}
+.page1{
+    width: 100%;
+}
+.page2{
+    padding: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page2-left{
+    width: 50%;
+
+}
+.page2-left video{
+    height: 70vh;
+}
+.page2-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+.page2-right p{
+    font-size: 2.5vw;
+    font-weight: 500;
+    letter-spacing: -.1vw;
+}
+.btn{
+    height: 30vh;
+    width: 70%;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 50vw;
+    font-size: 2vw;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, border-color 0.5s ease;
+    color: #000;
+    
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 100%; /* Initially hidden below the button */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: top 0.5s ease; /* Transition from bottom to top */
+    z-index: -1;
+}
+.btn .btn-text{
+    height: 5vh;
+    overflow: hidden;
+    /* background: red; */
+
+}
+.btn .btn-text h4{
+    transition: all ease-in-out 0.3s;
+
+
+}
+
+.btn:hover{
+    color: white;
+    border-color: transparent;
+}
+.btn:hover .btn-text h4{
+    transform: translateY(-100%);
+    transition: all ease-in-out 0.3s;
+}
+.btn:hover::before {
+    top: 0; /* Move from bottom to top on hover */
+  }
+
+.page3{
+    width: 100%;
+    background: #161616;
+    border-top-left-radius:  100px;
+    border-top-right-radius: 100px;
+    position: relative;
+    color: white;
+    /* overflow: hidden; */
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    padding: 7vw 15vw;
+    /* background: red; */
+}
+.feature h1{
+    font-size: 9vw;
+    font-weight: 400;
+}
+
+.feature video{
+    height: 25vh;
+}
+.feature .sub-feature{
+    display: flex;
+    align-items: center;
+}
+.feature .sub-feature h1{
+    font-family: 'Roboto Flex';
+    font-style: italic;
+    font-weight: 300;
+}
+.projects{
+    margin: 12vw 0;
+    display: flex;
+    gap: 9vw;
+    flex-wrap: wrap;
+}
+.project-container{
+    height: 80vh;
+    width: 30vw;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    /* position: relative; */
+
+}
+.project-box{
+    height: 90%;
+    /* background: #000; */
+}
+.project-container video{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.project-container:nth-child(even){
+    position: relative;
+    top: 40vh;
+
+}
+.page4{
+    position: relative;
+    width: 100%;
+    border-top-right-radius: 100px ;
+    border-top-left-radius: 100px ;
+    margin-top: -20vh;
+    background: white;
+    padding: 15vw 10vw;
+}
+.page4 h1{
+    font-size: 12vw;
+    font-weight: 400;
+}
+.page4 h1:nth-child(2){
+    font-family: 'Roboto Flex';
+    font-weight: 400;
+    font-style: italic;
+    line-height: 0.8;
+}
+.page4-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vw;
+    width: 90%;
+    /* background: red; */
+}
+.page4-left{
+    width: 50%;
+
+}
+.page4-right{
+    width: 35%;
+}
+
+.page4-left video{
+    height: 70vh;
+}
+.page4-right p{
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.page5{
+    background: #161616;
+    color: white;
+    position: relative;
+    width: 100%;
+    border-top-right-radius: 100px ;
+    border-top-left-radius: 100px ;
+    margin-top: -20vh;
+    padding: 15vw 10vw;
+    }
+.page5 h1{
+    font-size: 9vw;
+    line-height: 1;
+    font-weight: 400;
+}
+.page5 h1:nth-child(3){
+    font-family: 'roboto flex';
+    font-weight: 300;
+    font-size: 13vw;
+    line-height: .7;
+    font-style: italic;
+}
+
+.slider-container{
+    margin-top: 13vw;
+    display: flex;
+    gap: 3vw;
+    height: 50vh;
+    width: 80vw;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.slider-container::-webkit-scrollbar, .insta-scroller::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  /* Handle */
+.slider-container::-webkit-scrollbar-thumb, .insta-scroller::-webkit-scrollbar-thumb {
+    background: transparent; /* Transparent background for the scrollbar handle */
+    border-radius: 10px; /* Border radius of the handle */
+  }
+  
+  /* Track */
+.slider-container::-webkit-scrollbar-track, .insta-scroller::-webkit-scrollbar-track {
+    background: transparent; /* Transparent background for the scrollbar track */
+}
+
+.slider{
+    height: 40vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    transition: all ease 0.5s;
+}
+.slider:hover{
+    transform: scale(0.95);
+    transition: all ease 0.5s;
+}
+.slider img{
+    height: 40vh;
+    border-radius: 30px;
+}
+.page5-lower{
+    width: 30vw;
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    position: relative;
+    left: 60%;
+}
+.page5-lower p{
+    font-size: 1.5vw;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.page5-lower button{
+    width: 60%;
+    background: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 10px 10px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.page5-lower button div{
+    height: 20px;
+    /* background: red; */
+    overflow: hidden;
+}
+
+.page5-lower button h4{
+    color: white;
+    font-size: 20px;
+    transition: all ease 0.3s;
+}
+.page5-lower button:hover div h4{
+    transform: translateY(-100%);
+    transition: all ease 0.3s;
+    color: #000;
+}
+.page5-lower button:hover{
+    border: transparent;
+}
+.page5-lower button::before {
+    content: '';
+    position: absolute;
+    top: 100%; /* Initially hidden below the button */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: top 0.5s ease; /* Transition from bottom to top */
+    z-index: -1;
+}
+.page5-lower button:hover::before {
+    top: 0; /* Move from bottom to top on hover */
+}
+.page6 {
+    /* Your page6 styles */
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .scroll-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .scroll {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollContent 30s linear infinite;
+    align-items: center;
+  }
+  
+  .scroll p.scroll-text {
+    margin: 0;
+    font-size: 20vw; /* Adjust font size as needed */
+  }
+  
+  .scroll video {
+    height: 30vh;
+    margin-left: 20px; /* Adjust spacing between text and video */
+    border-radius: 45%;
+  }
+  
+  /* Animation for scrolling text and video */
+  @keyframes scrollContent {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-500%); }
+  }
+  
+.page7{
+    position: relative;
+    padding: 5vw 3vw;
+}
+.insta-scroller{
+    display: flex;
+    align-items: baseline;
+    gap: 3vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
+}
+.insta{
+    max-height: 40vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    /* background-size: contain; */
+    gap: 1vw;
+    /* background: red; */
+}
+.insta:hover img{
+    transform: scale(0.95);
+    transition: all ease 0.5s;
+}
+.insta-info{
+    display: flex;
+    gap: .5vw;
+}
+.insta img{
+    /* width: 20%; */
+    transition: all ease 0.5s;
+    border-radius: 10%;
+    background-size: cover;
+}
+.page8{
+    background: #000;
+    color: white;
+}
+.scroll-container1 {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    gap: 3vw;
+    margin: 100px 0;
+  }
+  
+  .scroll1 {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollContent1 15s linear infinite;
+    align-items: center;
+    gap: 2vw;
+  }
+  
+  .scroll1 p.scroll-text1 {
+    margin: 0;
+    font-size: 15vw; /* Adjust font size as needed */
+    color: white;
+  }
+  
+  .scroll1 video {
+    height: 30vh;
+    margin-left: 20px; /* Adjust spacing between text and video */
+    border-radius: 45%;
+  }
+  .spiner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.spiner img{
+    height: 300px;
+    width: 200px;
+    animation: rotate360 5s linear infinite; /* Adjust duration as needed */
+}
+.spiner video{
+    position: absolute;
+    top: 50%; /* Place the child 50% from the top */
+    left: 50%; /* Place the child 50% from the left */
+    transform: translate(-70%, -50%);
+    width: 8vw;
+
+}
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotate(0deg); /* Start from 0 degrees */
+    }
+    to {
+      transform: rotate(360deg); /* Rotate to 360 degrees */
+    }
+  }
+  /* Animation for scrolling text and video */
+  @keyframes scrollContent1 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+.page9{
+    margin-top: -8vw;
+    padding: 3vw 5vw;
+    background: #000;
+    color: white;
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw 0;
+    font-size: 3vw;
+    font-weight: 300;
+    border-bottom: 1px solid #dadada;
+    transition: background-color 0.5s ease; /* Smooth transition on hover */
+    position: relative;
+    overflow: hidden;
+}
+.link:nth-child(2){
+    margin-top: 40px;
+    border-top: 1px solid #dadada;
+}
+.link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: white; /* Animation color (white) */
+    transition: all 0.5s ease-in-out; /* Animation transition */
+    
+  }
+  
+  .link:hover::before {
+    height: 100%; /* Animate from center to top and bottom */
+  }
+.hover-div {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, transparent 50%, white 50%); /* Initial background gradient */
+    transition: background 0.5s ease; /* Smooth transition on hover */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+  
+  .hover-div:hover {
+    background: linear-gradient(to top right, transparent 50%, white 50%); /* Change background gradient on hover */
+  }
+  
+  .floating-text {
+    position: absolute;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    animation: floatText 10s linear infinite; /* Adjust duration as needed */
+    display: flex;
+    width: 100vw;
+    gap: 2vw;
+    opacity: 0;
+    color: #000;
+  }
+  .link:hover .floating-text{
+    opacity: 1;
+  }
+  @keyframes floatText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
